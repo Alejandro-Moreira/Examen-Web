@@ -1,6 +1,11 @@
+// Importar nodemailer
 const nodemailer = require("nodemailer");
 
-// create reusable transporter object using the default SMTP transport
+// Creacion del transportador para el envio de correos usando SMTP
+// SMTP - Gmail
+// SMTP - Outlook
+// SMTP - Mailtrap
+
 const transporter = nodemailer.createTransport({
     host: process.env.HOST_MAILTRAP,
     port: process.env.PORT_MAILTRAP,
@@ -11,9 +16,8 @@ const transporter = nodemailer.createTransport({
 })
 
 
-// send mail with defined transport object
+// Estructura del correo electronico 
 module.exports.sendMailToUser = async(userMail,token)=>{
-    console.log(token);
     let info = await transporter.sendMail({
     from: process.env.USER_MAILTRAP,
     to: userMail,

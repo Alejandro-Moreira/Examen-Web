@@ -1,14 +1,17 @@
+
+// Importar mongoose
 const mongoose = require('mongoose')
 
-//const MONGODB_URI = 'mongodb+srv://byrontosh:sistemas@cluster0.6e8zntc.mongodb.net/test'
-const MONGODB_URI = 'mongodb://localhost:27017/portfolio'
+// Generar un metodo para hacer la cadena de conexion
 connection = async()=>{
     try {
-         await mongoose.connect(MONGODB_URI)
+        await mongoose.connect(process.env.MONGODB_URI)
+        // Respuesta de la promesa cuando sea ok
         console.log("Database is connected")
     } catch (error) {
+        // Respuesta de la promesa cuando halla un error
         console.log(error);
     }
 }
-
+// Exportar el metodo connect
 module.exports = connection

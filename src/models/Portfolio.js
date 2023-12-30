@@ -1,5 +1,7 @@
+// Importar el esquema y el modelo
 const {Schema, model} = require('mongoose')
 
+// Crear un nuevo esquema -- portafolioSchema
 const portfolioSchema = new Schema({
     title:{
         type:String,
@@ -25,4 +27,5 @@ const portfolioSchema = new Schema({
     timestamps:true
 })
 
+// Exportar el modelo
 module.exports = model('portfolio',portfolioSchema)

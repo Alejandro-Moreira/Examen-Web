@@ -1,10 +1,13 @@
 {
-  "name": "examen",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node --watch src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,14 +24,15 @@
     "express-session": "^1.17.3",
     "fs-extra": "^11.2.0",
     "method-override": "^3.0.0",
-    "mongoose": "^8.0.3",
+    "mongoose": "^8.0.2",
     "nodemailer": "^6.9.7",
     "passport": "^0.7.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "sesion": "^0.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.2",
-    "npm-check-updates": "^16.14.12"
+    "npm-check-updates": "^16.14.11"
   }
 }
